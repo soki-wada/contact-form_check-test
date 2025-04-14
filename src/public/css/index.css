@@ -1,0 +1,96 @@
+.input__content{
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 1230px;
+}
+
+.section__title{
+    text-align: center;
+    color: #8B7969;
+}
+
+.create-form__table-wrapper{
+    width: 80%;
+    margin: 0 auto 50px;
+}
+
+.create-form__table{
+    width: 100%;
+}
+
+.create-form__table tr{
+    width: 100%;
+    color: #8B7969;
+}
+
+.create-form__table th{
+    width: 35%;
+    text-align: left;
+    padding: 15px 0px;
+}
+
+.create-form__table-asterisk{
+    color: #ff9494;
+    margin-left: 5px;
+}
+
+.create-form__table td{
+    width: 65%;
+}
+
+input, .create-form__category-select, .create-form__detail{
+    border: none;
+    background-color: #f4f4f4;
+    padding: 10px 30px;
+}
+
+.create-form__name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.create-form__name-first, .create-form__name-last{
+    width: 45%;
+}
+
+.create-form__gender{
+    accent-color: #8b7969;
+}
+
+.create-form__email, .create-form__address, .create-form__building{
+    width: 100%;
+}
+
+.create-form__tel{
+    display: flex;
+    justify-content: space-between;
+}
+
+.create-form__tel-item{
+    width: 30%;
+    text-align: center;
+}
+
+.create-form__category-select{
+    width: 50%;
+}
+
+.create-form__detail{
+    width: 100%;
+    height: 100px;
+    resize: none;
+}
+
+.create-form__button{
+    width: 160px;
+    height: 45px;
+    margin: 0 auto;
+}
+
+.create-form__button-submit{
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    background-color: #82756a;
+    cursor: pointer;
+}
