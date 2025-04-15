@@ -49,6 +49,7 @@
     height: 40px;
     margin-right: 60px;
     cursor: pointer;
+    border: none;
 }
 
 .confirm-form__button-fix{

@@ -39,9 +39,8 @@ header{
     color: #D9C6B5;
     border: 1px solid #D9C6B5;
     background-color: #f0f0f0;
-    display: block;
-    padding: 5px 10px;
-    text-align: center;
+    display: flex;
+    padding: 5px 20px;
+    justify-content: center;
+    align-items: center;
 }
-
-/* @section('header__button') <div class="header__button-wrapper"><a href="#" class="header__button">register </a></div>@endsection */
