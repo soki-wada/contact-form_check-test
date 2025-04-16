@@ -9,9 +9,14 @@
 @endsection
 
 @section('header__button')
-<div class="header__button-wrapper">
-    <a href="#" class="header__button">logout</a>
-</div>
+@if(Auth::check())
+<form action="{{route('logout')}}" class="header-form" method="post">
+    @csrf
+    <div class="header__button-wrapper">
+        <button class="header__button">logout</button>
+    </div>
+</form>
+@endif
 @endsection
 
 @section('content')

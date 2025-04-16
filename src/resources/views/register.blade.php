@@ -10,26 +10,36 @@
 
 @section('header__button')
 <div class="header__button-wrapper">
-    <a href="#" class="header__button">login</a>
+    <a href="/login" class="header__button">login</a>
 </div>
 @endsection
 
 @section('content')
+@if ($errors->any())
+<div class="error-messages">
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li style="color:red;">{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
+
 <div class="register__content">
     <div class="section__title">
         <h2>Register</h2>
     </div>
-    <form action="" class="register-form">
+    <form action="{{route('register')}}" class="register-form" method="post">
         @csrf
         <div class="register-form__wrapper">
             <div class="register-form__items-group">
                 <div class="register-form__item">
                     <h3>お名前</h3>
-                    <input type="text" name="name" placeholder="例: 山田　太郎">
+                    <input type="text" name="name" value="{{old('name')}}" placeholder="例: 山田　太郎">
                 </div>
                 <div class="register-form__item">
                     <h3>メールアドレス</h3>
-                    <input type="email" name="email" placeholder="例: test@example.com">
+                    <input type="email" name="email" value="{{old('email')}}" placeholder="例: test@example.com">
                 </div>
                 <div class="register-form__item">
                     <h3>パスワード</h3>

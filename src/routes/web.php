@@ -22,11 +22,9 @@ Route::get('/confirm', [ContactController::class, 'confirm']);
 
 Route::get('/thanks', [ContactController::class, 'thanks']);
 
-Route::get('/register', [UserController::class, 'register']);
-
-Route::get('/login', [UserController::class, 'login']);
-
-Route::get('/admin', [AdminController::class, 'admin']);
+Route::middleware('auth')->group(function () {
+    Route::get('/admin', [AdminController::class, 'admin']);
+});
 
 // Route::get('/', function () {
 //     return view('welcome');
