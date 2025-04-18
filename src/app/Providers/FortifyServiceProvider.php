@@ -14,6 +14,8 @@ use Illuminate\Support\Str;
 use Laravel\Fortify\Fortify;
 use Laravel\Fortify\Contracts\LogoutResponse;
 use App\Actions\Fortify\CustomLogoutResponse;
+use App\Http\Requests\CustomLoginRequest;
+use Laravel\Fortify\Http\Requests\LoginRequest;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -24,6 +26,7 @@ class FortifyServiceProvider extends ServiceProvider
     {
         //
         $this->app->singleton(LogoutResponse::class, CustomLogoutResponse::class);
+        $this->app->bind(LoginRequest::class, CustomLoginRequest::class);
     }
 
     /**

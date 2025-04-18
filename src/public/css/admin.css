@@ -63,6 +63,12 @@
     color: #8B7969;
 }
 
+svg.w-5.h-5 {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e0dfde;
+}
+
 .search-form__table-wrapper{
     width: 100%;
 }

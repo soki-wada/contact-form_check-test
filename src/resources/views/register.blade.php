@@ -15,16 +15,6 @@
 @endsection
 
 @section('content')
-@if ($errors->any())
-<div class="error-messages">
-    <ul>
-        @foreach ($errors->all() as $error)
-        <li style="color:red;">{{ $error }}</li>
-        @endforeach
-    </ul>
-</div>
-@endif
-
 <div class="register__content">
     <div class="section__title">
         <h2>Register</h2>
@@ -36,14 +26,23 @@
                 <div class="register-form__item">
                     <h3>お名前</h3>
                     <input type="text" name="name" value="{{old('name')}}" placeholder="例: 山田　太郎">
+                    @error('name')
+                    <p style="color: red;">{{$errors->first('name')}}</p>
+                    @enderror
                 </div>
                 <div class="register-form__item">
                     <h3>メールアドレス</h3>
                     <input type="email" name="email" value="{{old('email')}}" placeholder="例: test@example.com">
+                    @error('email')
+                    <p style="color: red;">{{$errors->first('email')}}</p>
+                    @enderror
                 </div>
                 <div class="register-form__item">
                     <h3>パスワード</h3>
                     <input type="password" name="password" placeholder="例: coachtech1106">
+                    @error('password')
+                    <p style="color: red;">{{$errors->first('password')}}</p>
+                    @enderror
                 </div>
             </div>
             <div class="register-form__button">

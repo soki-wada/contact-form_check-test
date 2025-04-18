@@ -43,7 +43,7 @@
     </form>
     <div class="search-form__sub-function">
         <button class="search-form__export">エクスポート</button>
-        <div class="page">ページネーション</div>
+        <div class="page">{{$contacts->links()}}</div>
     </div>
     <div class="search-form__table-wrapper">
         <table class="search-form__table">
@@ -54,13 +54,23 @@
                 <th>お問い合わせの種類</th>
                 <th></th>
             </tr>
+            @foreach($contacts as $contact)
             <tr>
-                <td>山田　太郎</td>
-                <td>男性</td>
-                <td>test@example.com</td>
-                <td>商品の交換について</td>
+                <td>{{$contact['first_name']}}　{{$contact['last_name']}}</td>
+                <td>
+                    @if($contact['gender'] == 1)
+                    男性
+                    @elseif($contact['gender'] == 2)
+                    女性
+                    @else
+                    その他
+                    @endif
+                </td>
+                <td>{{$contact['email']}}</td>
+                <td>{{$contact['category']['content']}}</td>
                 <td><button class="search-form__table-detail">詳細</button></td>
             </tr>
+            @endforeach
         </table>
     </div>
 </div>

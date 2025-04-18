@@ -37,7 +37,7 @@
     padding: 15px 30px;
 }
 
-.confirm-form__button{
+.confirm-form__buttons{
     display: flex;
     justify-content: center;
 }
@@ -54,6 +54,12 @@
 
 .confirm-form__button-fix{
     display: inline-block;
+    background-color: #ffffff;
     color: #82756a;
+    width: 120px;
+    height: 40px;
     line-height: 40px;
+    cursor: pointer;
+    border: none;
+    text-decoration: underline;
 }
