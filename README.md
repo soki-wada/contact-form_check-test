@@ -23,7 +23,7 @@
 ## ER図
     以下はこのプロジェクトのER図です。
 
-    ![ER図](test1ER.png)
+    ![ER図](vscode-remote://wsl%2Bubuntu/home/soki_wada/coachtech/checktest/test1/test1_ER.png)
 
 ## URL
     ・ 開発環境 : http://localhost/
