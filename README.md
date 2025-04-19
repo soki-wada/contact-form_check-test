@@ -23,7 +23,7 @@
 ## ER図
     以下はこのプロジェクトのER図です。
 
-    ![ER図](https://github.com/user-attachments/assets/c14551b6-be66-4012-8ce5-42c2ab8b37fc)
+    ![ER図](https://github.com/soki-wada/contact-form_check-test/blob/main/test1_ER.png)
 
 ## URL
     ・ 開発環境 : http://localhost/
