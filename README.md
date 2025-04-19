@@ -21,8 +21,9 @@
     ・ MySQL 8.0.26
 
 ## ER図
+    以下はこのプロジェクトのER図です。
 
-    ![ER](test.png)
+    ![ER図](test.png)
 
 ## URL
     ・ 開発環境 : http://localhost/
