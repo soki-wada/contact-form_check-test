@@ -23,7 +23,7 @@
 ## ER図
     以下はこのプロジェクトのER図です。
 
-    ![ER図](test1_ER.png)
+    ![ER図](test1_ER.svg)
 
 ## URL
     ・ 開発環境 : http://localhost/
