@@ -26,7 +26,7 @@ class ContactFactory extends Factory
             'tel' => $this->faker->randomElement($tel1) . $this->faker->numerify('########'),
             'address' => $this->faker->prefecture . $this->faker->city . $this->faker->streetAddress,
             'building' => $this->faker->word . $this->faker->numerify('###'),
-            'detail' => $this->faker->sentence
+            'detail' => $this->faker->realText(100, 3)
         ];
     }
 }

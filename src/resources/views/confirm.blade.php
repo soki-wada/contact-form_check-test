@@ -64,7 +64,7 @@
             <input type="hidden" name="{{ $key }}" value="{{ $value }}">
             @endforeach
             <div class="confirm-form__button">
-                <button class="confirm-form__button-submit">送信</button>
+                <button class="confirm-form__button-submit" type="submit">送信</button>
             </div>
         </form>
         <form action="/contact/fix" method="post">
@@ -73,7 +73,7 @@
             <input type="hidden" name="{{ $key }}" value="{{ $value }}">
             @endforeach
             <div class="confirm-form__button">
-                <button class="confirm-form__button-fix">修正</button>
+                <button class="confirm-form__button-fix" type="submit">修正</button>
             </div>
         </form>
     </div>

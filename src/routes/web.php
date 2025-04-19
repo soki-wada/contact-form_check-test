@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CsvController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,9 @@ Route::get('/thanks', [ContactController::class, 'thanks']);
 Route::middleware('auth')->group(function () {
     Route::get('/admin', [AdminController::class, 'admin']);
 });
-
+Route::get('/admin/search', [AdminController::class, 'search']);
+Route::delete('/admin/delete', [AdminController::class, 'destroy']);
+Route::get('/admin/export', [AdminController::class, 'export']);
 // Route::get('/', function () {
 //     return view('welcome');
 // });

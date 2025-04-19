@@ -54,7 +54,27 @@ input, .create-form__category-select, .create-form__detail{
 }
 
 .create-form__gender{
-    accent-color: #8b7969;
+    display: none;
+}
+
+.create-form__gender-button{
+    margin-left: 20px;
+}
+
+.create-form__gender-button{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #8b7969;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.create-form__gender:checked + .create-form__gender-button{
+    background-color: #8b7969;
+    border-color: #8B7969;
 }
 
 .create-form__email, .create-form__address, .create-form__building{
@@ -71,8 +91,30 @@ input, .create-form__category-select, .create-form__detail{
     text-align: center;
 }
 
-.create-form__category-select{
+.create-form__select-wrapper{
+    position: relative;
     width: 50%;
+}
+
+.create-form__select-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-top: 12px solid #555;
+    border-bottom: 0;
+    pointer-events: none;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.create-form__category-select{
+    width: 100%;
 }
 
 .create-form__detail{

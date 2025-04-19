@@ -48,12 +48,18 @@
                         <span class="create-form__table-asterisk">※</span>
                     </th>
                     <td>
-                        <input type="radio" class="create-form__gender" name="gender" value="1" id="man" {{ old('gender', '1') == '1' ? 'checked' : '' }}>
-                        <label for="man" name="create-form__gender-label">男性</label>
-                        <input type="radio" class="create-form__gender" name="gender" value="2" id="woman" {{ old('gender') == '2' ? 'checked' : '' }}>
-                        <label for="woman" name="create-form__gender-label">女性</label>
-                        <input type="radio" class="create-form__gender" name="gender" value="3" id="others" {{ old('gender') == '3' ? 'checked' : '' }}>
-                        <label for="others" name="create-form__gender-label">その他</label>
+                        <label for="man" name="create-form__gender-label">
+                            <input type="radio" class="create-form__gender" name="gender" value="1" id="man" {{ old('gender', '1') == '1' ? 'checked' : '' }}>
+                            <span class="create-form__gender-button"></span>男性
+                        </label>
+                        <label for="woman" name="create-form__gender-label">
+                            <input type="radio" class="create-form__gender" name="gender" value="2" id="woman" {{ old('gender') == '2' ? 'checked' : '' }}>
+                            <span class="create-form__gender-button"></span>女性
+                        </label>
+                        <label for="others" name="create-form__gender-label">
+                            <input type="radio" class="create-form__gender" name="gender" value="3" id="others" {{ old('gender') == '3' ? 'checked' : '' }}>
+                            <span class="create-form__gender-button"></span>その他
+                        </label>
                     </td>
                 </tr>
                 @error('gender')
@@ -125,12 +131,14 @@
                         <span class="create-form__table-asterisk">※</span>
                     </th>
                     <td>
-                        <select name="category_id" class="create-form__category-select" value="{{old('category_id')}}">
-                            <option value="" selected style="color:#8b7969;">選択してください</option>
-                            @foreach($categories as $category)
-                            <option value="{{$category->id}}" @if($category->id == old('category_id')) selected @endif>{{$category->content}}</option>
-                            @endforeach
-                        </select>
+                        <div class="create-form__select-wrapper">
+                            <select name="category_id" class="create-form__category-select" value="{{old('category_id')}}">
+                                <option value="" selected style="color:#8b7969;">選択してください</option>
+                                @foreach($categories as $category)
+                                <option value="{{$category->id}}" @if($category->id == old('category_id')) selected @endif>{{$category->content}}</option>
+                                @endforeach
+                            </select>
+                        </div>
                     </td>
                 </tr>
                 @error('category_id')
